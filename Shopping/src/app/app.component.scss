@@ -1,0 +1,10 @@
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+button:disabled {
+    background-color: rgb(223, 238, 86);
+
+}

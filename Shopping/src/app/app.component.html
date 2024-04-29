@@ -1,6 +1,5 @@
-
 <h2>My Shopping Cart</h2>
 <p>Cart Count:{{item_count}}</p>
-<button (click)="addtoCart()">AddtoCart</button>
+<button (click)="addtoCart() " [disabled]="item_count===5"> Add to Cart </button>
 
-<button (click)="removeFromCart()">RemoveFromCart</button>
+<button (click)="removeFromCart()" [disabled]=" item_count===0 "> Remove From Cart </button>

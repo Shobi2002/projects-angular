@@ -7,14 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Shopping';
-  item_count=0;
-  addtoCart(){
+  item_count = 0;
+  addtoCart() {
     this.item_count++;
-  }  
-  removeFromCart(){
-    if(this.item_count>0){
-     this.item_count--;
+  }
+  removeFromCart() {
+    if (this.item_count > 0) {
+      this.item_count--;
     }
-  
- }
+
+  }
 }
