@@ -1,20 +1,25 @@
+// app.component.ts
+
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Shopping';
-  item_count = 0;
-  addtoCart() {
-    this.item_count++;
-  }
-  removeFromCart() {
-    if (this.item_count > 0) {
-      this.item_count--;
-    }
+  products: string[] = [];
+  newProduct: string = '';
+  showEven: boolean = true;
 
+  addProduct() {
+    if (this.newProduct.trim() !== '') {
+      this.products.push(this.newProduct);
+      this.newProduct = ''; // Clear input
+    }
+  }
+
+  toggleVisibility() {
+    this.showEven = !this.showEven;
   }
 }

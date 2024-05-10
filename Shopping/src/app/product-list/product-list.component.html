@@ -1,0 +1,8 @@
+<!-- product-list.component.html -->
+
+<ul>
+    <ng-container *ngFor="let product of products; let i = index">
+      <li *ngIf="(showEven && (i + 1) % 2 === 0) || (!showEven && (i + 1) % 2 !== 0)" [ngStyle]="getStyle(i)">{{ product }}</li>
+    </ng-container>
+  </ul>
+  
