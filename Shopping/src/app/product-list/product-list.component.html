@@ -1,8 +1,20 @@
-<!-- product-list.component.html -->
-
-<ul>
-    <ng-container *ngFor="let product of products; let i = index">
-      <li *ngIf="(showEven && (i + 1) % 2 === 0) || (!showEven && (i + 1) % 2 !== 0)" [ngStyle]="getStyle(i)">{{ product }}</li>
-    </ng-container>
-  </ul>
-  
+<div class="custom-container">
+  <div class="flex m-4 items-center">
+    <label class="font-bold px-6">Add Product:</label>
+    <input type="text" [(ngModel)]="productName" class="custom-input" placeholder="Enter Product Name"
+      (keyup.enter)="addProduct()">
+  </div>
+  <div class="flex">
+    <button class="custom-button" (click)="addProduct()">Create Product</button>
+  </div>
+  <div class="flex flex-col max-h-72 overflow-auto">
+    <p [hidden]="productList.length % 2 == 0" class="text-center">List has odd number of products</p>
+    <ul>
+      <li *ngFor="let item of productList; index as index; even as e; odd as o" class="custom-list-item"
+        [ngClass]="{'bg-blue-600': index> 9, 'hover:bg-lime-400': e, 'hover:bg-lime-800' : o }"
+        [ngStyle]="index > 14 ? {'color': 'yellow'} : {}">
+        {{index+1}}. {{item}} <div class="flex px-1" *ngIf="o">x</div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,6 +1,9 @@
 // app.component.ts
 
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { ProductListComponent } from './product-list/product-list.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -8,18 +11,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  products: string[] = [];
-  newProduct: string = '';
-  showEven: boolean = true;
-
-  addProduct() {
-    if (this.newProduct.trim() !== '') {
-      this.products.push(this.newProduct);
-      this.newProduct = ''; // Clear input
-    }
-  }
-
-  toggleVisibility() {
-    this.showEven = !this.showEven;
-  }
+  title = 'Shopping';
 }

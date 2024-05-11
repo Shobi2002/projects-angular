@@ -1,16 +1,5 @@
-<app-product-list>
-    <!-- app.component.html -->
-<div>
-    <h2>Add product:</h2>
-    <input type="text" [(ngModel)]="newProduct">
-    <button (click)="addProduct()">Create Product</button>
+<app-product-list style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+  <div class="min-h-dvh flex items-center justify-center">
+    <!-- Your content here -->
   </div>
-  
-  <div>
-    <h2>Toggle:</h2>
-    <p (click)="toggleVisibility()">Toggle: {{ showEven ? 'Hide Even' : 'Hide Odd' }}</p>
-  </div>
-  
-  <app-product-list [products]="products" [showEven]="showEven"></app-product-list>
-  
 </app-product-list>
