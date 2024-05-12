@@ -5,6 +5,7 @@
     min-height: 100vh;
 }
 
+
 .custom-container {
     min-width: 50%;
     min-height: 50%;
@@ -60,4 +61,24 @@
 
 .text-center {
     text-align: center;
+}
+
+.custom-list-item:nth-child(odd) {
+    background-color: #0ff;
+    /* Light blue background for odd items */
+}
+
+.custom-list-item:nth-child(even) {
+    background-color: #f00;
+    /* Red background for even items */
+}
+
+.custom-list-item:nth-child(n+11):nth-child(-n+15) {
+    background-color: #0f0;
+    /* Green background for items 11 to 15 */
+}
+
+.custom-list-item:nth-child(n+16) {
+    background-color: #ff0;
+    /* Yellow background for items 16 and beyond */
 }
