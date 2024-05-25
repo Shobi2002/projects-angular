@@ -1,21 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component'; // Adjust path as necessary
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent
+    ShoppingListComponent // Declare the component here
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    CommonModule
+    FormsModule // Add FormsModule here
   ],
   providers: [],
   bootstrap: [AppComponent]

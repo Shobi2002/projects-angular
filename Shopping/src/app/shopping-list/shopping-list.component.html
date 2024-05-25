@@ -1,0 +1,32 @@
+<div class="container">
+  <label for="options">Please select the Brand : </label>
+  <select id="options" [(ngModel)]="MySelect">
+    <option value="Dell">Dell</option>
+    <option value="Microsoft">Microsoft</option>
+    <option value="Samsung">Samsung</option>
+  </select>
+  <br>
+
+  <div [ngSwitch]="MySelect" class="ng-switch-content">
+    <div *ngSwitchCase="'Dell'">
+      <img src="assets/Dell.png" alt="Dell">
+      <p>Dell Inc. is an American technology company that develops, sells, repairs, and supports computers and related
+        products and services. <br>Dell is owned by its parent company, Dell Technologies.</p>
+    </div>
+    <div *ngSwitchCase="'Microsoft'">
+      <img src="assets/Microsoft.png" alt="Microsoft" width="200px" height="100px">
+      <p>Uncover the power of Microsoft's products, apps, and devices designed to simplify your life and fuel your
+        passions.</p>
+    </div>
+    <div *ngSwitchCase="'Samsung'">
+      <img src="assets/Samsung.png" alt="Samsung">
+      <p>The All New Galaxy · Galaxy S24 Ultra · Galaxy S24 | S24+ · Galaxy Z Flip5 · Galaxy Z Fold5 · Galaxy Tab S9 |
+        S9+
+        | S9 Ultra · Galaxy Watch6 · Galaxy Book4 Series ...
+      </p>
+    </div>
+    <div *ngSwitchDefault>
+      <p>Please select a brand to see the details.</p>
+    </div>
+  </div>
+</div>
